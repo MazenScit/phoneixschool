@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1040799091430",
+    "firebase_url": "https://phoenix-6a1b8.firebaseio.com",
+    "project_id": "phoenix-6a1b8",
+    "storage_bucket": "phoenix-6a1b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040799091430:android:2376386098e161d7",
+        "android_client_info": {
+          "package_name": "com.scit.phoenix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040799091430-ls5rq7sptuoh7bbonv9v1a9jd84b8f8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9AFiz1kjxj4WVXXdNstDLiGy1KPhIysA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
