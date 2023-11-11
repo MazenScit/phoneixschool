@@ -35,6 +35,13 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
 publishing:
+  app_store_connect: B87A5KUV28
+  submit_to_testflight: true
+  expire_build_submitted_for_review: true
+  submit_to_app_store: true
+  cancel_previous_submissions: true
+  release_type: SCHEDULED
+  copyright: @scit
   email:
     recipients:
       - D.mazen@scit.co
