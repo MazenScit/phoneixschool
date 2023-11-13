@@ -129,7 +129,9 @@ class _LoginPageState extends State<LoginPage> {
                                 setIgnoring(!ignoring);
                                 mydata=[];
                                 await user_controller.login(context,phonecontroller.text, passwordcontroller.text,).then((value){
-                                  mydata=value;
+                                  // value=null;
+                                  print(value);
+                                  mydata=value??[];
                                   
                                 }).whenComplete((){
                                   setIgnoring(!ignoring);

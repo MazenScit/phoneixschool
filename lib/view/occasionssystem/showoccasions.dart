@@ -20,6 +20,9 @@ bool nullstatement=false;
 class _ShowOccasionState extends State<ShowOccasion> {
   @override
   void initState() {
+    if (!(mydata.isEmpty)) {
+      
+    
     _message_controller.getmessages(3, mydata[0].student_card_id).then((value) {
       myoccassion=value!;
       setState(() {
@@ -31,6 +34,7 @@ class _ShowOccasionState extends State<ShowOccasion> {
                                           nullstatement=true;
                                           });
                                       });
+              }
     super.initState();
   }
   @override

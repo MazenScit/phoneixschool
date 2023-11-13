@@ -20,6 +20,9 @@ bool nullstatement=false;
 class _AdvertisingPageState extends State<AdvertisingPage> {
   @override
   void initState() {
+    if (!(mydata.isEmpty)) {
+      
+    
     _message_controller.getmessages(7, mydata[0].student_card_id).then((value) {
       myoccassion=value!;
       setState(() {
@@ -30,7 +33,8 @@ class _AdvertisingPageState extends State<AdvertisingPage> {
                                         setState(() {
                                           nullstatement=true;
                                           });
-                                      });;
+                                      });
+                                      }
     super.initState();
   }
   @override

@@ -47,8 +47,9 @@ List <Widget> pages=[MessagePage(),FilesManaging(),DegreeMainPage(),ShowNotesByP
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    
-     
+     print(mydata);
+     if(!(mydata.isEmpty)){
+     print("we are here");
     _message_controller.getmessages(3, mydata[0].student_card_id).then((value) {
       myoccassion=value!;
       setState(() {
@@ -59,7 +60,9 @@ class _HomePageState extends State<HomePage> {
                                             nullstatement=true;
                                             });
                                   });
+     }
     super.initState();
+
   }
   @override
   Widget build(BuildContext context) {
@@ -84,7 +87,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 100,
                 child: DataSwiper(myoccassion:myoccassion),
-              ):CircularProgressIndicator():Text("somthing went wrong!!"),
+              ):SizedBox():Text("somthing went wrong!!"),
              Opacity(
               opacity: 0.8,
                child: Container(
