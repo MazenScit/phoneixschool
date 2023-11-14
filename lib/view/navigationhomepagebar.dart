@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:awesome_dialog/awesome_dialog.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -28,7 +28,7 @@ enum SampleItem { itemOne, itemTwo, itemThree }
 NotiicationSysytem _notiicationSysytem=NotiicationSysytem();
 class HomePageNavBarState extends State<HomePageNavBar> {
   
-var fbm =FirebaseMessaging.instance;
+// var fbm =FirebaseMessaging.instance;
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late int _selectedIndex;
@@ -41,36 +41,36 @@ final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
    @override
   void initState() {
     
-    fbm.getToken().then((token) {
-       print("tooooooooooooken  :  $token");
-       _notiicationSysytem.sendNotificationToken(context, token!);
-       print("tooooooooooooken end");
-     },);
-     FirebaseMessaging.onMessage.listen((event) {
+    // fbm.getToken().then((token) {
+    //    print("tooooooooooooken  :  $token");
+    //    _notiicationSysytem.sendNotificationToken(context, token!);
+    //    print("tooooooooooooken end");
+    //  },);
+    //  FirebaseMessaging.onMessage.listen((event) {
 
-      print(event.data.toString());
-      var mylist=event.data.values.elementAt(0);
-      FlutterRingtonePlayer.playNotification();
-      print(jsonDecode(mylist)["message_title"]);
-      print(jsonDecode(mylist)["message_body"]);
+    //   print(event.data.toString());
+    //   var mylist=event.data.values.elementAt(0);
+    //   FlutterRingtonePlayer.playNotification();
+    //   print(jsonDecode(mylist)["message_title"]);
+    //   print(jsonDecode(mylist)["message_body"]);
       
-      AwesomeDialog(
-        dialogType: DialogType.info,
-        animType: AnimType.rightSlide,
-        body:Column(
-          children: [
-            Text(jsonDecode(mylist)["message_title"],style: TextStyle(color: Colors.red,fontSize: 16),),
-            Text(jsonDecode(mylist)["message_body"],style: TextStyle(color: Colors.black,fontSize: 16),),
-          ],
-        ),
-        context: context,
-         btnOkOnPress: () {
-          print("updated");
-             _notiicationSysytem.updateMessageToSeen(jsonDecode(mylist)["message_id"]);
-         },
-        )..show();
+    //   AwesomeDialog(
+    //     dialogType: DialogType.info,
+    //     animType: AnimType.rightSlide,
+    //     body:Column(
+    //       children: [
+    //         Text(jsonDecode(mylist)["message_title"],style: TextStyle(color: Colors.red,fontSize: 16),),
+    //         Text(jsonDecode(mylist)["message_body"],style: TextStyle(color: Colors.black,fontSize: 16),),
+    //       ],
+    //     ),
+    //     context: context,
+    //      btnOkOnPress: () {
+    //       print("updated");
+    //          _notiicationSysytem.updateMessageToSeen(jsonDecode(mylist)["message_id"]);
+    //      },
+    //     )..show();
         
-     });
+    //  });
     _selectedIndex=0;
     super.initState();
   }

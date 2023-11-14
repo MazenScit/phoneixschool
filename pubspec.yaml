@@ -50,9 +50,9 @@ dependencies:
   awesome_dialog: ^3.1.0
   http: ^1.1.0
   shared_preferences: ^2.2.1
-  firebase_core: ^2.15.1
-  cloud_firestore: ^4.9.1
-  firebase_messaging: ^14.6.7
+  # firebase_core: ^2.15.1
+  # cloud_firestore: ^4.9.1
+  # firebase_messaging: ^14.6.7
   flutter_launcher_icons: ^0.13.1
   flutter_ringtone_player: ^3.2.0
 flutter_launcher_icons:

@@ -3,7 +3,6 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  firebase_core
   permission_handler_windows
   rive_common
   url_launcher_windows
